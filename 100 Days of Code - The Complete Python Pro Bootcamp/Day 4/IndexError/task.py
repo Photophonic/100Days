@@ -6,4 +6,13 @@ states_of_america = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Conne
                      "North Dakota", "South Dakota", "Montana", "Washington", "Idaho", "Wyoming", "Utah", "Oklahoma",
                      "New Mexico", "Arizona", "Alaska", "Hawaii"]
 
-print(states_of_america)
+# print(states_of_america)
+
+# A list of lists
+fruits = ["Cherry", "Apple", "Pear"]
+veg = ["Cucumber", "Kale", "Spinnach"]
+fruits_and_veg = [fruits, veg]
+
+print(fruits_and_veg)
+# access an item in the list of lists
+print(fruits_and_veg[1][2])
