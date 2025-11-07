@@ -16,3 +16,22 @@ then n is not prime. If none do, then n is a prime number.
 n = 8
 
 print(is_prime(n))
+
+
+enemies = 1
+
+def increase_enemies(enemy):
+    # global enemies
+    enemy += 1
+    # print(enemies)
+    return enemy
+
+enemies = increase_enemies(enemies)
+print(enemies)
+
+# creating global constant, make them uppercase
+PI = 3.14159
+GOOGLE_URL = "https://www.google.com"
+
+
+
