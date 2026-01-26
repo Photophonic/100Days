@@ -1,32 +1,27 @@
-MENU = {
-    "espresso": {
-        "ingredients": {
-            "water": 50,
-            "coffee": 18,
-        },
-        "cost": 1.5,
-    },
-    "latte": {
-        "ingredients": {
-            "water": 200,
-            "milk": 150,
-            "coffee": 24,
-        },
-        "cost": 2.5,
-    },
-    "cappuccino": {
-        "ingredients": {
-            "water": 250,
-            "milk": 100,
-            "coffee": 24,
-        },
-        "cost": 3.0,
-    }
-}
+import coffee as cf
 
-resources = {
-    "water": 300,
-    "milk": 200,
-    "coffee": 100,
-}
+menu = cf.MENU
+resources = cf.resources
 
+# control state of machine
+is_on = True
+money = 0
+
+while is_on:
+    choice = input("What would you like? (espresso/latte/cappuccino): ")
+
+    # used to exit while loop
+    if choice == "off":
+        is_on = False
+
+    elif choice == "report":
+        print(f'Water: {resources['water']} ml\n'
+              f'Milk: {resources['milk']} ml\n'
+              f'Coffee: {resources['coffee']} ml\n'
+              f'Money: ${money}')
+    else:
+        # get resources required for selected drink
+        drink = menu[choice]
+        #  check if there is enough via function
+        if cf.resource_amount(drink['ingredients']):
+            print('Thanks')
